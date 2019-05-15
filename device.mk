@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
     bootctrl.trinket.recovery
 
 PRODUCT_PACKAGES += \
-    libgptutils
+    libgptutils.trinket
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl \
