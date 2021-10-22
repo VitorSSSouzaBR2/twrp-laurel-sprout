@@ -36,7 +36,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # A/B
 AB_OTA_UPDATER := true
-TW_INCLUDE_REPACKTOOLS := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom androidboot.memcg=1 cgroup.memory=nokmem,nosocket console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 loop.max_part=7 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 buildvariant=user
@@ -75,3 +74,4 @@ TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
+TW_INCLUDE_REPACKTOOLS := true
