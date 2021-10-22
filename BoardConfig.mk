@@ -40,7 +40,19 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom androidboot.memcg=1 cgroup.memory=nokmem,nosocket console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 loop.max_part=7 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 buildvariant=user
+BOARD_KERNEL_CMDLINE := \
+     androidboot.console=ttyMSM0 \
+     androidboot.hardware=qcom \
+     androidboot.memcg=1 \
+     cgroup.memory=nokmem,nosocket \
+     console=ttyMSM0,115200n8 \
+     earlycon=msm_geni_serial,0x4a90000 \
+     loop.max_part=7 \
+     lpm_levels.sleep_disabled=1 \
+     msm_rtb.filter=0x237 \
+     service_locator.enable=1 swiotlb=1 \
+     buildvariant=user
+
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -54,15 +66,13 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
-TARGET_KERNEL_CONFIG := laurel_sprout_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := trinket
 
 # Recovery
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Hack: prevent anti rollback
