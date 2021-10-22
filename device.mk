@@ -11,7 +11,9 @@ LOCAL_PATH := device/xiaomi/laurel_sprout
 AB_OTA_PARTITIONS += \
     boot \
     system \
-    vendor
+    vendor \
+    vbmeta \
+    dtbo
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
