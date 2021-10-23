@@ -58,3 +58,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
+
+# additional
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libion \
+    libnetutils
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libnetutils.so
+
+PRODUCT_COPY_FILES += \
+    $(OUT_DIR)/target/product/laurel_sprout/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+
