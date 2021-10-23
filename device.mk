@@ -49,10 +49,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery
 
-# Fastboot
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock
-
 PRODUCT_PACKAGES += \
     cppreopts.sh \
     update_engine \
