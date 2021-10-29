@@ -1649,46 +1649,6 @@
     <kernel version="4.4.0" level="2">
         <conditions>
             <config>
-                <key>CONFIG_ANDROID_LOW_MEMORY_KILLER</key>
-                <value type="tristate">n</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_MEMCG</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_MEMCG_SWAP</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="4.4.0" level="2">
-        <conditions>
-            <config>
-                <key>CONFIG_MEMCG</key>
-                <value type="tristate">n</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_ANDROID_LOW_MEMORY_KILLER</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="4.4.0" level="2">
-        <conditions>
-            <config>
-                <key>CONFIG_MEMCG_SWAP</key>
-                <value type="tristate">n</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_ANDROID_LOW_MEMORY_KILLER</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="4.4.0" level="2">
-        <conditions>
-            <config>
                 <key>CONFIG_ARM64</key>
                 <value type="tristate">y</value>
             </config>

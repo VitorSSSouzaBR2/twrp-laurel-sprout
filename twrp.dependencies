@@ -13,9 +13,9 @@
   },
   {
     "remote": "github",
-    "repository": "iHemal/android_kernel_xiaomi_laurel_sprout",
+    "repository": "HarukeyUA/android_kernel_xiaomi_laurel_sprout",
     "target_path": "kernel/xiaomi/laurel_sprout",
-    "revision": "ruby-arrow"
+    "revision": "lineage-18.1"
   }
 ]
 

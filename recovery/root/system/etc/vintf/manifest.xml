@@ -2,7 +2,6 @@
     Input:
         manifest.xml
         framework_manifest.xml
-        framework_manifest.xml
 -->
 <manifest version="2.0" type="framework">
     <hal format="hidl">
@@ -98,16 +97,6 @@
             <instance>AtCmdFwdService</instance>
         </interface>
         <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.sigma_miracast</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>Isigma_miracast</name>
-            <instance>sigmahal</instance>
-        </interface>
-        <fqname>@1.0::Isigma_miracast/sigmahal</fqname>
     </hal>
     <system-sdk>
         <version>28</version>
