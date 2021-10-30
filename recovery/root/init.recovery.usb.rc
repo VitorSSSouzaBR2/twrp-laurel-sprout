@@ -60,10 +60,20 @@ on boot
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=1000,rmode=0770,fmode=0660
     write /sys/class/android_usb/android0/f_ffs/aliases adb
     setprop sys.usb.configfs 1
+    enable vendor.qcom-usb-sh
+    start vendor.qcom-usb-sh
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
+    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
 
+service vendor.qcom-usb-sh /system/bin/init.qcom.usb.sh
+    class core
+    user root
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+    
 on property:sys.usb.config=none && property:sys.usb.configfs=1
     stop adbd
     setprop sys.usb.ffs.ready 0
