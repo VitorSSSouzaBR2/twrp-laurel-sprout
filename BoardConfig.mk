@@ -126,6 +126,7 @@ TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 
+TW_DEVICE_VERSION := by Hemal
 
 # Logcat
 TWRP_INCLUDE_LOGCAT := true
