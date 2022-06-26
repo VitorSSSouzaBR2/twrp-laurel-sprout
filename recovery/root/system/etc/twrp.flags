@@ -10,7 +10,7 @@
 /system_image    emmc              /dev/block/bootdevice/by-name/system     flags=slotselect
 /dtbo            emmc              /dev/block/bootdevice/by-name/dtbo       flags=slotselect;backup=1;display="Dtbo";flashimg=1
 /metadata	 ext4	           /dev/block/bootdevice/by-name/metadata   flags=display="Metadata";backup=1;wrappedkey
-/data            f2fs	           /dev/block/bootdevice/by-name/userdata   flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0
+/data            f2fs	           /dev/block/bootdevice/by-name/userdata   flags=fileencryption=ice
 /vendor          ext4              /dev/block/bootdevice/by-name/vendor     flags=slotselect;display="Vendor";backup=0;wipeingui
 /vendor_image    emmc              /dev/block/bootdevice/by-name/vendor     flags=slotselect
 /misc            emmc              /dev/block/bootdevice/by-name/misc
